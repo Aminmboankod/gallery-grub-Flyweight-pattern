@@ -8,7 +8,7 @@ Para completar el examen se facilitan los siguientes recursos:
 
 ## Diagrama UML
 
-![diagrama](/galley-grub/diagrama_clases_UML.png)
+![diagrama](/diagrama_clases_UML.png)
 
 ## Salida CLI
 
