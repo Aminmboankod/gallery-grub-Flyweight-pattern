@@ -12,5 +12,5 @@ Para completar el examen se facilitan los siguientes recursos:
 
 ## Salida CLI
 
-![cli1](/galley-grub/CLI_01.png)
-![cli2](/galley-grub/CLI_02.png)
+![cli1](/CLI_01.png)
+![cli2](/CLI_02.png)
