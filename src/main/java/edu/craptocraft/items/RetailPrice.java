@@ -16,10 +16,10 @@ public class RetailPrice {
         prices.put("sauce", 0.50d);
         prices.put("medium", 0.25);
         prices.put("large", 0.50d);
-        }
+    }
 
     public static void display() {
-        prices.forEach((key, value) -> System.out.println(key+ "="+value+"$"));
+        prices.forEach((key, value) -> System.out.println("\t"+key+ "="+value+"$"));
     }
     
-}
+}   
