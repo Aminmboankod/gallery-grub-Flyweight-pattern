@@ -5,6 +5,7 @@ public class Item implements Product {
     protected String name;
     protected double price;
     protected String extra;
+    public RetailPrice prices = new RetailPrice();
 
     //constructor sin extra
     
@@ -45,7 +46,7 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        return getName()+" - $"+getPrice();
+        return getName()+"....."+getPrice()+"$";
     }
 
     @Override
