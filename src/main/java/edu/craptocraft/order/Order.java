@@ -3,28 +3,33 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import edu.craptocraft.items.Item;
+import edu.craptocraft.items.ItemFactory;
 
 public class Order implements Comanda{
 
     public Double total = 0d;
     public List<Item> items = new ArrayList<Item>();
 
+    public Order(){
+
+    }
+
     @Override
     public void addItem(String name, double price) {
-        // TODO Auto-generated method stub
+        Item item = ItemFactory.getItem(name, price);
+        this.items.add(item);
         
     }
 
     @Override
     public void addItem(String name, double price, String extra) {
-        // TODO Auto-generated method stub
+        Item item = ItemFactory.getItem(name, price);
+        this.items.add(item);
         
     }
 
-    @Override
     public int size() {
-        // TODO Auto-generated method stub
-        return 0;
+        return this.items.size();
     }
 
     @Override
@@ -34,8 +39,7 @@ public class Order implements Comanda{
 
     @Override
     public Double getTotal() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.total;
     }
 
     @Override

@@ -57,15 +57,16 @@ public class Item implements Product {
     }
 
     @Override
-    public int hashCode() {
-        return 0;
-    }
-    
     public boolean equals(Object obj) {
-        if (obj instanceof Item) {
-            
+        if(obj instanceof Item) {
+            return this.name.equals(((Item)obj).name);
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
     }
 
 
