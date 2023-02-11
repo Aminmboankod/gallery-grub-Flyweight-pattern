@@ -15,11 +15,14 @@ public class ItemFactory {
         return itemMap.get(name);
     }
 
+    public static Item getItem(String name, double price, String extra) {
+        
+        itemMap.putIfAbsent(name + " w/ " + extra, new Item(name, price, extra));
+        return itemMap.get(name + " w/ " + extra);
+    }
+
     public static Object size() {
         return itemMap.size();
     }
 
-    public static Item getItem(String string, double d, String string2) {
-        return null;
-    }
 }
