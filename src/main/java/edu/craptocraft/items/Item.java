@@ -2,9 +2,9 @@ package edu.craptocraft.items;
 
 public class Item implements Product {
 
-    protected String name;
-    protected double price;
-    protected String extra;
+    String name;
+    double price = 0d;
+    String extra;
     public RetailPrice prices = new RetailPrice();
 
     //constructor sin extra
@@ -46,7 +46,7 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        return getName()+"....."+getPrice()+"$";
+        return this.name + "...." + String.format("%.2f", this.price) + "$";
     }
 
     @Override
@@ -54,8 +54,11 @@ public class Item implements Product {
         return 0;
     }
     
-    public boolean equals(Item item) {
-        return true;
+    public boolean equals(Object obj) {
+        if (obj instanceof Item) {
+            
+        }
+        return false;
     }
 
 

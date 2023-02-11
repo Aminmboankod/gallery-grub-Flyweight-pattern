@@ -1,10 +1,13 @@
 package edu.craptocraft.order;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-
 import edu.craptocraft.items.Item;
 
 public class Order implements Comanda{
+
+    public Double total = 0d;
+    public List<Item> items = new ArrayList<Item>();
 
     @Override
     public void addItem(String name, double price) {
@@ -26,8 +29,7 @@ public class Order implements Comanda{
 
     @Override
     public List<Item> itemList() {
-        // TODO Auto-generated method stub
-        return null;
+        return Collections.unmodifiableList(this.items);
     }
 
     @Override
@@ -44,8 +46,13 @@ public class Order implements Comanda{
 
     @Override
     public void display() {
-        // TODO Auto-generated method stub
+        System.out.println("\n\t --- ORDER --- \n");
+        itemList().stream().forEach(this::itemDisplay);
         
+    }
+
+    private void itemDisplay(Item item){
+        System.out.print("\t" + item.toString() + "\n");
     }
 
 }
